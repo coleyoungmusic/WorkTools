@@ -1,1 +1,9 @@
+html, body {
+  background: grey;
+  height: 100%;
+}
 
+img {
+  border-style: solid;
+  box-shadow: 20px 20px 20px;
+}
