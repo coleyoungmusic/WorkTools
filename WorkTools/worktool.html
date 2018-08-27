@@ -15,36 +15,49 @@
   <br>
 
   <div class="container">
-    <h2>Work Tool</h2>
+    <h2 class="text-center">WORK TOOL</h2>
     <br>
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" href="#blurb_tool">Blurb Tool</a>
+        <a class="nav-link active" data-toggle="tab" href="#call_notes">Call Notes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#blurb_tool">Blurb Tool</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="#case_converter">Case Converter</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#menu2">Tool 3</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#menu2">Tool 4</a>
+        <a class="nav-link" data-toggle="tab" href="#register_advocate">Add Advocate/Database Request</a>
       </li>
     </ul>
+  </div>
 
     <!-- Tab panes -->
     <div class="tab-content">
 
-
-      <div id="blurb_tool" class="container tab-pane active"><br>
+      <div id="call_notes" class="container tab-pane active"><br>
         <div class="form-group col-sm-6">
-          <input type="text" class="form-control mb-3 text-center" id="Name" placeholder="Name">
-          <input type="text" class="form-control mb-3 text-center" id="Name" placeholder="Date of Birth">
-          <input type="text" class="form-control mb-3 text-center" id="Name" placeholder="Income">
-
+          <fieldset>
+          <input type="text" class="form-control mb-3 text-center" id="field1" placeholder="Name of drug" value="">
+          <input type="text" class="form-control mb-3 text-center" id="field2" placeholder="Reason for call" value="">
+          </fieldset>
+          <button type="button" class="btn btn-dark" onclick="submit()">SUBMIT</button>
+          <button type="button" class="btn btn-dark" onclick="clear_fields()">CLEAR</button><br><br>
+          <textarea rows="6" cols="70" name="comment" form="usrform" id='fields'></textarea>
         </div>
       </div>
+
+
+      <div id="blurb_tool" class="container tab-pane fade"><br>
+        <div class="form-group col-sm-6">
+          <h4>COMING SOON.......</h4>
+          <img src="https://i.gifer.com/P0ck.gif" alt="">
+        </div>
+      </div>
+
+
 
       <div id="case_converter" class="container tab-pane fade"><br>
 
@@ -52,17 +65,23 @@
         <button type="button" class="btn btn-dark" onclick="titleCase('converted_text')">Title Case</button>
         <button type="button" class="btn btn-dark" onclick="lowerCase('converted_text')">Lower Case</button>
 
-        <p id="demo"></p>
 
-
-        <!-- enter application here -->
       </div>
 
-      <div id="menu2" class="container tab-pane fade"><br>
-        <!-- enter application here -->
+      <div id="register_advocate" class="container tab-pane fade "><br>
+        <div class="form-group col-sm-6">
+        <fieldset>
+        <input type="text" class="form-control mb-3 text-center" id="advocate_name" placeholder="Advocate Name">
+        <input type="text" class="form-control mb-3 text-center" id="site_name" placeholder="Site Name">
+        <input type="text" class="form-control mb-3 text-center" id="site_address" placeholder="Site Address">
+        <input type="text" class="form-control mb-3 text-center" id="site_phone" placeholder="Site Phone Number">
+        <input type="text" class="form-control mb-3 text-center" id="site_fax" placeholder="Site Fax Number">
+        <input type="text" class="form-control mb-3 text-center" id="patient_id" placeholder="Patient ID">
+        </fieldset>
+        <button type="button" class="btn btn-dark" onclick="advocate_submit()">SUBMIT</button>
+        <button type="button" class="btn btn-dark" onclick="advocate_clear()">CLEAR</button><br><br>
+        <textarea rows="8" cols="50" name="comment" form="usrform" id='submit_info'></textarea>
       </div>
-
-
     </div>
   </div>
 
